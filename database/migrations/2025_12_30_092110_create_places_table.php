@@ -3,6 +3,7 @@
 use App\Models\City;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -28,6 +29,8 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->timestamps();
         });
+
+        DB::statement('ALTER TABLE places AUTO_INCREMENT = 26000001');
     }
 
     /**
