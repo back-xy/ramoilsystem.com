@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\City;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -28,6 +29,7 @@ class PlaceFactory extends Factory
             'social_apps' => $selectedApps,
             'is_customer' => fake()->boolean(30),
             'activity_percentage' => fake()->numberBetween(0, 100),
+            'city_id' => fn() => City::query()->inRandomOrder()->value('id') ?? City::factory(),
             'address' => fake()->optional(0.8)->address(),
             'gps' => fake()->optional(0.7)->latitude() . ',' . fake()->longitude(),
             'image' => fake()->optional(0.5)->imageUrl(640, 480, 'business'),
