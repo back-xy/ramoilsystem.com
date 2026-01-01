@@ -10,10 +10,13 @@ class ManageCities extends ManageRecords
 {
     protected static string $resource = CityResource::class;
 
+    protected static ?string $title = 'شارەکان';
+
     protected function getHeaderActions(): array
     {
         return [
-            CreateAction::make(),
+            CreateAction::make()
+                ->label('دروستکردنی شار'),
         ];
     }
 }

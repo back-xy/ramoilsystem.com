@@ -20,6 +20,12 @@ class CityResource extends Resource
 {
     protected static ?string $model = City::class;
 
+    protected static ?string $navigationLabel = 'شارەکان';
+
+    protected static ?string $modelLabel = 'شار';
+
+    protected static ?string $pluralModelLabel = 'شارەکان';
+
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
     public static function form(Schema $schema): Schema
@@ -27,6 +33,7 @@ class CityResource extends Resource
         return $schema
             ->components([
                 TextInput::make('name')
+                    ->label('ناو')
                     ->required(),
             ]);
     }
@@ -37,6 +44,7 @@ class CityResource extends Resource
             ->defaultSort('created_at', 'desc')
             ->columns([
                 TextColumn::make('name')
+                    ->label('ناو')
                     ->sortable()
                     ->searchable(),
             ])
@@ -44,15 +52,17 @@ class CityResource extends Resource
                 //
             ])
             ->recordActions([
-                EditAction::make(),
+                EditAction::make()
+                    ->label('دەستکاریکردن'),
                 DeleteAction::make()
+                    ->label('سڕینەوە')
                     ->disabled(fn(City $record) => $record->places()->exists())
-                    ->tooltip('Cannot delete: city has places linked'),
+                    ->tooltip('ناتوانرێت بسڕێتەوە: شارەکە شوێنی پەیوەستی هەیە'),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([
                     BulkAction::make('select_only')
-                        ->label('No Action')
+                        ->label('هیچ کردارێک نییە')
                         ->disabled(),
                 ]),
             ]);
