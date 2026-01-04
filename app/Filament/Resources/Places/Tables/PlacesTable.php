@@ -23,7 +23,8 @@ class PlacesTable
                     ->label('کۆد')
                     ->sortable()
                     ->searchable()
-                    ->prefix('#'),
+                    ->prefix('#')
+                    ->extraAttributes(['dir' => 'ltr']),
 
                 TextColumn::make('place_name')
                     ->label('ناوی شوێن')
@@ -44,13 +45,15 @@ class PlacesTable
                 TextColumn::make('primary_phone')
                     ->label('مۆبایلی سەرەکی')
                     ->searchable()
-                    ->sortable(),
+                    ->sortable()
+                    ->extraAttributes(['dir' => 'ltr']),
 
                 TextColumn::make('secondary_phone')
                     ->label('مۆبایلی لاوەکی')
                     ->searchable()
                     ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->toggleable(isToggledHiddenByDefault: true)
+                    ->extraAttributes(['dir' => 'ltr']),
 
                 TextColumn::make('social_apps')
                     ->label('تۆڕی پەیوەندی')
@@ -74,7 +77,8 @@ class PlacesTable
                     ->suffix('%')
                     ->numeric()
                     ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->toggleable(isToggledHiddenByDefault: true)
+                    ->extraAttributes(['dir' => 'ltr']),
 
                 TextColumn::make('city.name')
                     ->label('شار')
@@ -91,7 +95,8 @@ class PlacesTable
                     ->label('GPS')
                     ->searchable()
                     ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->toggleable(isToggledHiddenByDefault: true)
+                    ->extraAttributes(['dir' => 'ltr']),
 
                 ImageColumn::make('image')
                     ->label('وێنە')
