@@ -24,6 +24,8 @@ class PlaceResource extends Resource
 
     protected static ?string $pluralModelLabel = 'شوێنەکان';
 
+    protected static ?int $navigationSort = 1;
+
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
     public static function form(Schema $schema): Schema

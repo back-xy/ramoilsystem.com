@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Cities;
 use App\Filament\Resources\Cities\Pages\ManageCities;
 use App\Models\City;
 use BackedEnum;
+use UnitEnum;
 use Filament\Actions\BulkAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteAction;
@@ -26,7 +27,11 @@ class CityResource extends Resource
 
     protected static ?string $pluralModelLabel = 'شارەکان';
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static UnitEnum|string|null $navigationGroup = 'ڕێکخستنەکان';
+
+    protected static ?int $navigationSort = 10;
+
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedCog6Tooth;
 
     public static function form(Schema $schema): Schema
     {
