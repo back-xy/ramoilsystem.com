@@ -116,7 +116,7 @@ class PlaceForm
                     ->columnSpanFull(),
 
                 FileUpload::make('image')
-                    ->label('وێنەی کار / لۆگۆ')
+                    ->label('وێنەی شوێن / لۆگۆ')
                     ->image()
                     ->imageEditor()
                     ->imageEditorAspectRatios([
@@ -127,7 +127,7 @@ class PlaceForm
                     ->openable()
                     ->downloadable()
                     ->maxSize(2048)
-                    ->hint('وێنە یان لۆگۆیەکە (زۆرترین قەبارە 2MB)')
+                    ->hint('(زۆرترین قەبارە 2MB)')
                     ->columnSpanFull(),
             ]);
     }
