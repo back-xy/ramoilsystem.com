@@ -10,10 +10,13 @@ class EditPlace extends EditRecord
 {
     protected static string $resource = PlaceResource::class;
 
+    protected static ?string $title = 'دەستکاریی شوێن';
+
     protected function getHeaderActions(): array
     {
         return [
-            DeleteAction::make(),
+            DeleteAction::make()
+                ->label('سڕینەوە'),
         ];
     }
 }

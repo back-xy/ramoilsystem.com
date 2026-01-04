@@ -53,7 +53,7 @@ class CityResource extends Resource
             ])
             ->recordActions([
                 EditAction::make()
-                    ->label('دەستکاریکردن'),
+                    ->label('دەستکاری'),
                 DeleteAction::make()
                     ->label('سڕینەوە')
                     ->disabled(fn(City $record) => $record->places()->exists())

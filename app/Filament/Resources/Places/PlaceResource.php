@@ -18,6 +18,12 @@ class PlaceResource extends Resource
 {
     protected static ?string $model = Place::class;
 
+    protected static ?string $navigationLabel = 'شوێنەکان';
+
+    protected static ?string $modelLabel = 'شوێن';
+
+    protected static ?string $pluralModelLabel = 'شوێنەکان';
+
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
     public static function form(Schema $schema): Schema

@@ -10,10 +10,13 @@ class ListPlaces extends ListRecords
 {
     protected static string $resource = PlaceResource::class;
 
+    protected static ?string $title = 'شوێنەکان';
+
     protected function getHeaderActions(): array
     {
         return [
-            CreateAction::make(),
+            CreateAction::make()
+                ->label('دروستکردنی شوێن'),
         ];
     }
 }
