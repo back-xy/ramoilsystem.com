@@ -29,9 +29,9 @@ class CityResource extends Resource
 
     protected static UnitEnum|string|null $navigationGroup = 'ڕێکخستنەکان';
 
-    protected static ?int $navigationSort = 10;
+    protected static ?int $navigationSort = 20;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedCog6Tooth;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedMapPin;
 
     public static function form(Schema $schema): Schema
     {

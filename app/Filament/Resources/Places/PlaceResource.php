@@ -9,6 +9,7 @@ use App\Filament\Resources\Places\Schemas\PlaceForm;
 use App\Filament\Resources\Places\Tables\PlacesTable;
 use App\Models\Place;
 use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -24,7 +25,9 @@ class PlaceResource extends Resource
 
     protected static ?string $pluralModelLabel = 'شوێنەکان';
 
-    protected static ?int $navigationSort = 1;
+    protected static UnitEnum|string|null $navigationGroup = 'سەرەکی';
+
+    protected static ?int $navigationSort = 10;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
