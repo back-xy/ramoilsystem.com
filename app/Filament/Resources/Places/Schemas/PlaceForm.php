@@ -118,7 +118,6 @@ class PlaceForm
                 FileUpload::make('image')
                     ->label('وێنەی شوێن / لۆگۆ')
                     ->image()
-                    ->disk('public') //test
                     ->imageEditor()
                     ->imageEditorAspectRatios([
                         '16:9',
