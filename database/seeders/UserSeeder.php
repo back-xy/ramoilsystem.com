@@ -16,8 +16,9 @@ class UserSeeder extends Seeder
     {
         // Admin User
         User::create([
-            'name' => env('ADMIN_NAME', 'بەڕێوەبەر'),
+            'name' => env('ADMIN_NAME', 'بەڕێوەبەری یەکەم'),
             'email' => env('ADMIN_EMAIL', 'admin@ramoilcompany.com'),
+            'phone' => '0750 000 0000',
             'role' => 'admin',
             'password' => Hash::make(env('ADMIN_PASSWORD', '1111')),
             'email_verified_at' => now(),
@@ -27,6 +28,7 @@ class UserSeeder extends Seeder
         User::create([
             'name' => env('USER_NAME', 'بەکارهێنەر'),
             'email' => env('USER_EMAIL', 'user@ramoilcompany.com'),
+            'phone' => '0750 000 0000',
             'role' => 'user',
             'password' => Hash::make(env('USER_PASSWORD', '1111')),
             'email_verified_at' => now(),

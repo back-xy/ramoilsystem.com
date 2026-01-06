@@ -46,6 +46,7 @@ class PlacesTable
                     ->label('مۆبایلی سەرەکی')
                     ->searchable()
                     ->sortable()
+                    ->alignment('right')
                     ->extraAttributes(['dir' => 'ltr']),
 
                 TextColumn::make('secondary_phone')
@@ -53,6 +54,7 @@ class PlacesTable
                     ->searchable()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true)
+                    ->alignment('right')
                     ->extraAttributes(['dir' => 'ltr']),
 
                 TextColumn::make('social_apps')

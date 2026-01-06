@@ -52,6 +52,14 @@ class UserForm
                             ->minLength(6)
                             ->maxLength(255)
                             ->visibleOn('create'),
+
+
+                        TextInput::make('phone')
+                            ->label('ژمارەی مۆبایل')
+                            ->placeholder('0750 123 4567')
+                            ->tel()
+                            ->maxLength(255)
+                            ->extraInputAttributes(['dir' => 'ltr', 'style' => 'text-align: right;']),
                     ])
                     ->columnSpanFull(),
             ]);

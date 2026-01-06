@@ -23,6 +23,12 @@ class UsersTable
                     ->searchable()
                     ->sortable(),
 
+                TextColumn::make('phone')
+                    ->label('ژمارەی مۆبایل')
+                    ->searchable()
+                    ->extraAttributes(['dir' => 'ltr'])
+                    ->alignment('right'),
+
                 TextColumn::make('role')
                     ->label('ڕۆل')
                     ->badge()

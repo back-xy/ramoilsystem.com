@@ -38,15 +38,18 @@ class PlaceForm
 
                 TextInput::make('primary_phone')
                     ->label('ژمارەی مۆبایلی سەرەکی')
-                    ->placeholder('+964 750 123 4567')
+                    ->placeholder('0750 123 4567')
                     ->tel()
-                    ->maxLength(255),
+                    ->maxLength(255)
+                    ->extraInputAttributes(['dir' => 'ltr', 'style' => 'text-align: right;']),
+
 
                 TextInput::make('secondary_phone')
                     ->label('ژمارەی مۆبایلی لاوەکی')
-                    ->placeholder('+964 770 987 6543')
+                    ->placeholder('0770 987 6543')
                     ->tel()
-                    ->maxLength(255),
+                    ->maxLength(255)
+                    ->extraInputAttributes(['dir' => 'ltr', 'style' => 'text-align: right;']),
 
                 Grid::make()
                     ->columns(4)
