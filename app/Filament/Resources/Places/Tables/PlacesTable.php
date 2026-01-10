@@ -124,6 +124,13 @@ class PlacesTable
                     ->relationship('city', 'name')
                     ->searchable()
                     ->preload(),
+
+                SelectFilter::make('is_customer')
+                    ->label('کڕیار')
+                    ->options([
+                        1 => 'بەڵێ',
+                        0 => 'نەخێر',
+                    ]),
             ])
             ->recordActions([
                 EditAction::make()
