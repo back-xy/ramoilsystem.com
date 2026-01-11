@@ -38,7 +38,7 @@ class UserForm
                     ->schema([
                         TextInput::make('email')
                             ->label('ئیمەیل')
-                            ->placeholder('example@ramoilcompany.com')
+                            ->placeholder('example@ramoilsystem.com')
                             ->email()
                             ->required()
                             ->maxLength(255)

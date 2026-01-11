@@ -1,5 +1,12 @@
 {
     "$schema": "https://www.schemastore.org/package.json",
+    "name": "ramoilsystem.com",
+    "version": "1.0.0",
+    "description": "Ram Oil Company Management System",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/back-xy/ramoilsystem.com.git"
+    },
     "private": true,
     "type": "module",
     "scripts": {

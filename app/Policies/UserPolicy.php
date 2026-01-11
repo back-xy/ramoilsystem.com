@@ -37,7 +37,7 @@ class UserPolicy
     public function update(User $user, User $model): bool
     {
         // Prevent editing the main admin account
-        if ($model->email === 'admin@ramoilcompany.com') {
+        if ($model->email === 'admin@ramoilsystem.com') {
             return false;
         }
 
@@ -50,7 +50,7 @@ class UserPolicy
     public function delete(User $user, User $model): bool
     {
         // Prevent deleting the main admin account
-        if ($model->email === 'admin@ramoilcompany.com') {
+        if ($model->email === 'admin@ramoilsystem.com') {
             return false;
         }
 
